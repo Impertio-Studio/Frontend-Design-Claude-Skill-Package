@@ -2,6 +2,6 @@
 # https://platform.openai.com/docs/codex/skills
 name: frontend-design-claude-skill-package
 description: >
-  0 deterministic Claude AI skills for Frontend Design evergreen-2026.
+  36 deterministic Claude AI skills for Frontend Design evergreen-2026.
   Framework-agnostic deterministic Claude skills for modern frontend design : CSS foundations, theming, accessibility, performance, component patterns, visual effects
 skills_directory: ./skills/source

@@ -1,7 +1,7 @@
 {
   "name": "@openaec/frontend-design-claude-skill-package",
   "version": "1.0.0",
-  "description": "0 deterministic Claude AI skills for Frontend Design evergreen-2026",
+  "description": "36 deterministic Claude AI skills for Frontend Design evergreen-2026",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -14,10 +14,158 @@
     "claude-skills",
     "claude-code",
     "frontend",
-    "html","css","javascript","typescript",
+    "html",
+    "css",
+    "javascript",
+    "typescript",
     "openaec"
   ],
   "agents": {
-    "skills": []
+    "skills": [
+      {
+        "name": "frontend-a11y-aria-patterns",
+        "path": "./skills/source/frontend-a11y/frontend-a11y-aria-patterns"
+      },
+      {
+        "name": "frontend-a11y-focus-keyboard-inert",
+        "path": "./skills/source/frontend-a11y/frontend-a11y-focus-keyboard-inert"
+      },
+      {
+        "name": "frontend-a11y-motion-contrast-wcag22",
+        "path": "./skills/source/frontend-a11y/frontend-a11y-motion-contrast-wcag22"
+      },
+      {
+        "name": "frontend-agents-a11y-perf-consistency-auditor",
+        "path": "./skills/source/frontend-agents/frontend-agents-a11y-perf-consistency-auditor"
+      },
+      {
+        "name": "frontend-agents-design-system-validator",
+        "path": "./skills/source/frontend-agents/frontend-agents-design-system-validator"
+      },
+      {
+        "name": "frontend-component-data-tables-command-palette",
+        "path": "./skills/source/frontend-component/frontend-component-data-tables-command-palette"
+      },
+      {
+        "name": "frontend-component-modal-toast-system",
+        "path": "./skills/source/frontend-component/frontend-component-modal-toast-system"
+      },
+      {
+        "name": "frontend-core-architecture",
+        "path": "./skills/source/frontend-core/frontend-core-architecture"
+      },
+      {
+        "name": "frontend-core-design-philosophy",
+        "path": "./skills/source/frontend-core/frontend-core-design-philosophy"
+      },
+      {
+        "name": "frontend-core-web-standards-baseline",
+        "path": "./skills/source/frontend-core/frontend-core-web-standards-baseline"
+      },
+      {
+        "name": "frontend-errors-animation-jank",
+        "path": "./skills/source/frontend-errors/frontend-errors-animation-jank"
+      },
+      {
+        "name": "frontend-errors-cascade-conflicts",
+        "path": "./skills/source/frontend-errors/frontend-errors-cascade-conflicts"
+      },
+      {
+        "name": "frontend-errors-layout-pitfalls",
+        "path": "./skills/source/frontend-errors/frontend-errors-layout-pitfalls"
+      },
+      {
+        "name": "frontend-errors-units-rendering-viewport",
+        "path": "./skills/source/frontend-errors/frontend-errors-units-rendering-viewport"
+      },
+      {
+        "name": "frontend-impl-design-tokens",
+        "path": "./skills/source/frontend-impl/frontend-impl-design-tokens"
+      },
+      {
+        "name": "frontend-impl-popover-dialog-anchor",
+        "path": "./skills/source/frontend-impl/frontend-impl-popover-dialog-anchor"
+      },
+      {
+        "name": "frontend-impl-responsive-layout-fluid",
+        "path": "./skills/source/frontend-impl/frontend-impl-responsive-layout-fluid"
+      },
+      {
+        "name": "frontend-impl-typography-system",
+        "path": "./skills/source/frontend-impl/frontend-impl-typography-system"
+      },
+      {
+        "name": "frontend-impl-view-transitions-scroll-animations",
+        "path": "./skills/source/frontend-impl/frontend-impl-view-transitions-scroll-animations"
+      },
+      {
+        "name": "frontend-impl-web-components",
+        "path": "./skills/source/frontend-impl/frontend-impl-web-components"
+      },
+      {
+        "name": "frontend-perf-animation-gpu-containment",
+        "path": "./skills/source/frontend-perf/frontend-perf-animation-gpu-containment"
+      },
+      {
+        "name": "frontend-perf-core-web-vitals-inp",
+        "path": "./skills/source/frontend-perf/frontend-perf-core-web-vitals-inp"
+      },
+      {
+        "name": "frontend-syntax-css-cascade-layers-scope",
+        "path": "./skills/source/frontend-syntax/frontend-syntax-css-cascade-layers-scope"
+      },
+      {
+        "name": "frontend-syntax-css-color-modern",
+        "path": "./skills/source/frontend-syntax/frontend-syntax-css-color-modern"
+      },
+      {
+        "name": "frontend-syntax-css-container-queries",
+        "path": "./skills/source/frontend-syntax/frontend-syntax-css-container-queries"
+      },
+      {
+        "name": "frontend-syntax-css-grid-subgrid",
+        "path": "./skills/source/frontend-syntax/frontend-syntax-css-grid-subgrid"
+      },
+      {
+        "name": "frontend-syntax-css-has-selector",
+        "path": "./skills/source/frontend-syntax/frontend-syntax-css-has-selector"
+      },
+      {
+        "name": "frontend-syntax-css-nesting-logical-properties",
+        "path": "./skills/source/frontend-syntax/frontend-syntax-css-nesting-logical-properties"
+      },
+      {
+        "name": "frontend-syntax-html5-form",
+        "path": "./skills/source/frontend-syntax/frontend-syntax-html5-form"
+      },
+      {
+        "name": "frontend-syntax-html5-semantic",
+        "path": "./skills/source/frontend-syntax/frontend-syntax-html5-semantic"
+      },
+      {
+        "name": "frontend-syntax-js-es2024-ts-dom",
+        "path": "./skills/source/frontend-syntax/frontend-syntax-js-es2024-ts-dom"
+      },
+      {
+        "name": "frontend-theming-color-palette-oklch",
+        "path": "./skills/source/frontend-theming/frontend-theming-color-palette-oklch"
+      },
+      {
+        "name": "frontend-theming-dark-light-mode",
+        "path": "./skills/source/frontend-theming/frontend-theming-dark-light-mode"
+      },
+      {
+        "name": "frontend-visual-glassmorphism-backdrop",
+        "path": "./skills/source/frontend-visual/frontend-visual-glassmorphism-backdrop"
+      },
+      {
+        "name": "frontend-visual-gradients",
+        "path": "./skills/source/frontend-visual/frontend-visual-gradients"
+      },
+      {
+        "name": "frontend-visual-micro-interactions",
+        "path": "./skills/source/frontend-visual/frontend-visual-micro-interactions"
+      }
+    ]
   }
 }

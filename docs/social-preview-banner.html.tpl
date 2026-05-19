@@ -10,7 +10,7 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
-    background: #1A1A2E;
+    background: {{BG_COLOR}};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,7 +20,7 @@
   .banner {
     width: 1280px;
     height: 640px;
-    background: #1A1A2E;
+    background: {{BG_COLOR}};
     position: relative;
     overflow: hidden;
     display: flex;
@@ -33,7 +33,7 @@
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #6366F1 0%, #06B6D4 50%, #F59E0B 100%);
+    background: linear-gradient(90deg, {{BRAND_PRIMARY}} 0%, {{BRAND_SECONDARY}} 50%, {{BRAND_ACCENT}} 100%);
   }
 
   /* Subtle blueprint grid */
@@ -73,7 +73,7 @@
     font-family: 'Space Grotesk', system-ui, sans-serif;
     font-size: 26px;
     font-weight: 700;
-    color: #6366F1;
+    color: {{BRAND_PRIMARY}};
     letter-spacing: 4px;
     text-transform: uppercase;
     margin-bottom: 22px;
@@ -106,9 +106,9 @@
     border: 2px solid;
   }
 
-  .badge-1 { border-color: #6366F1;   color: #6366F1; }
-  .badge-2 { border-color: #06B6D4; color: #06B6D4; }
-  .badge-3 { border-color: #F59E0B;    color: #F59E0B; }
+  .badge-1 { border-color: {{BRAND_PRIMARY}};   color: {{BRAND_PRIMARY}}; }
+  .badge-2 { border-color: {{BRAND_SECONDARY}}; color: {{BRAND_SECONDARY}}; }
+  .badge-3 { border-color: {{BRAND_ACCENT}};    color: {{BRAND_ACCENT}}; }
 
   .versions {
     font-family: 'JetBrains Mono', monospace;
@@ -181,16 +181,16 @@
   }
 
   .comment  { color: #A1A1AA; }
-  .keyword  { color: #6366F1; }
-  .function { color: #06B6D4; }
+  .keyword  { color: {{BRAND_PRIMARY}}; }
+  .function { color: {{BRAND_SECONDARY}}; }
   .string   { color: #34D399; }
-  .operator { color: #F59E0B; }
+  .operator { color: {{BRAND_ACCENT}}; }
   .type     { color: #3178C6; }
   .cursor {
     display: inline-block;
     width: 8px;
     height: 17px;
-    background: #6366F1;
+    background: {{BRAND_PRIMARY}};
     vertical-align: text-bottom;
   }
 
@@ -211,7 +211,7 @@
   }
 
   .foundation-name .open { color: #FAFAF9; }
-  .foundation-name .aec  { color: #6366F1; }
+  .foundation-name .aec  { color: {{BRAND_PRIMARY}}; }
 
   .foundation-sub {
     font-family: 'Inter', system-ui, sans-serif;
@@ -228,18 +228,18 @@
 
     <!-- Left: text content -->
     <div class="left">
-      <div class="number">36</div>
+      <div class="number">0</div>
       <div class="title">Deterministic Skills</div>
-      <div class="subtitle">for expert-level framework-agnostic frontend development</div>
+      <div class="subtitle">for {{TECH_TAGLINE}}</div>
 
       <div class="badges">
-        <div class="badge badge-1">HTML5 &#43; modern CSS</div>
-        <div class="badge badge-2">ES2024 &#43; TS strict</div>
-        <div class="badge badge-3">WCAG 2.2 &#43; APG</div>
+        <div class="badge badge-1">{{BADGE_1}}</div>
+        <div class="badge badge-2">{{BADGE_2}}</div>
+        <div class="badge badge-3">{{BADGE_3}}</div>
       </div>
 
       <div class="versions">
-        evergreen-2026 <span class="sep">&#9474;</span> baseline-2024&#43; <span class="sep">&#9474;</span> 10 categories <span class="sep">&#9474;</span> 36 skills
+        {{VERSION_LINE}}
       </div>
     </div>
 
@@ -250,22 +250,10 @@
           <div class="dot dot-red"></div>
           <div class="dot dot-yellow"></div>
           <div class="dot dot-green"></div>
-          <span class="code-filename">modern-button.css</span>
+          <span class="code-filename">{{CODE_FILENAME}}</span>
         </div>
         <div class="code-body">
-          <span class="comment">/* Baseline 2024+ : @layer + oklch + @container */</span><br>
-<span class="keyword">@layer</span> base, components, utilities;<br><br>
-<span class="keyword">@layer</span> components {<br>
-&nbsp;&nbsp;.btn {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;background: <span class="function">oklch</span>(<span class="operator">65%</span> 0.18 250);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;color: <span class="function">light-dark</span>(<span class="string">white</span>, <span class="string">#111</span>);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;container-type: <span class="type">inline-size</span>;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;transition-behavior: <span class="keyword">allow-discrete</span>;<br>
-&nbsp;&nbsp;}<br>
-}<br><br>
-<span class="keyword">@container</span> (width &gt; <span class="operator">24rem</span>) {<br>
-&nbsp;&nbsp;.btn { padding: 1rem 2rem; }<br>
-}
+          {{CODE_BODY}}
           <span class="cursor"></span>
         </div>
       </div>
@@ -283,30 +271,18 @@
 <!--
 TEMPLATE VARIABLES:
 ==================
-#1A1A2E         — Background color (e.g., #1A1A2E, #2A2A32)
-#6366F1    — Primary brand color (e.g., #61DAFB for React, #FFC131 for Tauri)
-#06B6D4  — Secondary color (e.g., #3178C6 for TypeScript)
-#F59E0B     — Accent color (e.g., #A855F7 for purple)
+{{BG_COLOR}}         — Background color (e.g., #1A1A2E, #2A2A32)
+{{BRAND_PRIMARY}}    — Primary brand color (e.g., #61DAFB for React, #FFC131 for Tauri)
+{{BRAND_SECONDARY}}  — Secondary color (e.g., #3178C6 for TypeScript)
+{{BRAND_ACCENT}}     — Accent color (e.g., #A855F7 for purple)
 0      — Number of skills (e.g., 24, 27)
-expert-level framework-agnostic frontend development     — Short tagline (e.g., "expert-level React 18 & 19 development")
-HTML5 &#43; modern CSS          — First badge text (e.g., "React 18 + 19")
-ES2024 &#43; TS strict          — Second badge text (e.g., "TypeScript")
-WCAG 2.2 &#43; APG          — Third badge text (e.g., "18 Hooks")
-evergreen-2026 <span class="sep">&#9474;</span> baseline-2024&#43; <span class="sep">&#9474;</span> 10 categories <span class="sep">&#9474;</span> 36 skills     — Version info with HTML separators using <span class="sep">│</span>
-modern-button.css    — Filename in code window titlebar (e.g., "App.tsx", "lib.rs")
-<span class="comment">/* Baseline 2024+ : @layer + oklch + @container */</span><br>
-<span class="keyword">@layer</span> base, components, utilities;<br><br>
-<span class="keyword">@layer</span> components {<br>
-&nbsp;&nbsp;.btn {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;background: <span class="function">oklch</span>(<span class="operator">65%</span> 0.18 250);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;color: <span class="function">light-dark</span>(<span class="string">white</span>, <span class="string">#111</span>);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;container-type: <span class="type">inline-size</span>;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;transition-behavior: <span class="keyword">allow-discrete</span>;<br>
-&nbsp;&nbsp;}<br>
-}<br><br>
-<span class="keyword">@container</span> (width &gt; <span class="operator">24rem</span>) {<br>
-&nbsp;&nbsp;.btn { padding: 1rem 2rem; }<br>
-}        — HTML-formatted code snippet using span classes: .comment, .keyword, .function, .string, .operator, .type
+{{TECH_TAGLINE}}     — Short tagline (e.g., "expert-level React 18 & 19 development")
+{{BADGE_1}}          — First badge text (e.g., "React 18 + 19")
+{{BADGE_2}}          — Second badge text (e.g., "TypeScript")
+{{BADGE_3}}          — Third badge text (e.g., "18 Hooks")
+{{VERSION_LINE}}     — Version info with HTML separators using <span class="sep">│</span>
+{{CODE_FILENAME}}    — Filename in code window titlebar (e.g., "App.tsx", "lib.rs")
+{{CODE_BODY}}        — HTML-formatted code snippet using span classes: .comment, .keyword, .function, .string, .operator, .type
 
 BRAND COLOR REFERENCE:
 ====================
