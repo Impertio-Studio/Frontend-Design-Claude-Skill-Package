@@ -8,24 +8,31 @@ All skill content MUST be verified against these approved sources. No unverified
 
 | Source | URL | Type | Last Verified |
 |--------|-----|------|---------------|
-| MDN Web Docs : HTML | https://developer.mozilla.org/en-US/docs/Web/HTML | Reference | Not yet |
-| MDN Web Docs : CSS | https://developer.mozilla.org/en-US/docs/Web/CSS | Reference | Not yet |
-| MDN Web Docs : JavaScript | https://developer.mozilla.org/en-US/docs/Web/JavaScript | Reference | Not yet |
-| MDN Web Docs : Web APIs | https://developer.mozilla.org/en-US/docs/Web/API | Reference | Not yet |
+| MDN Web Docs : HTML | https://developer.mozilla.org/en-US/docs/Web/HTML | Reference | 2026-05-19 |
+| MDN Web Docs : CSS | https://developer.mozilla.org/en-US/docs/Web/CSS | Reference | 2026-05-19 |
+| MDN Web Docs : JavaScript | https://developer.mozilla.org/en-US/docs/Web/JavaScript | Reference | 2026-05-19 |
+| MDN Web Docs : Web APIs | https://developer.mozilla.org/en-US/docs/Web/API | Reference | 2026-05-19 |
 | MDN Web Docs : Accessibility | https://developer.mozilla.org/en-US/docs/Web/Accessibility | Reference | Not yet |
-| WHATWG HTML Living Standard | https://html.spec.whatwg.org/multipage/ | Specification | Not yet |
+| WHATWG HTML Living Standard | https://html.spec.whatwg.org/multipage/ | Specification | 2026-05-19 |
 | WHATWG DOM Living Standard | https://dom.spec.whatwg.org/ | Specification | Not yet |
 | W3C CSS Working Group | https://www.w3.org/Style/CSS/ | Specification index | Not yet |
 | W3C Technical Reports (TR) | https://www.w3.org/TR/ | Specification index | Not yet |
-| W3C WAI : WCAG 2.2 | https://www.w3.org/TR/WCAG22/ | Specification | Not yet |
+| W3C WAI : WCAG 2.2 | https://www.w3.org/TR/WCAG22/ | Specification | 2026-05-19 |
 | W3C WAI : ARIA 1.2 | https://www.w3.org/TR/wai-aria-1.2/ | Specification | Not yet |
-| W3C WAI : ARIA Authoring Practices Guide | https://www.w3.org/WAI/ARIA/apg/ | Patterns | Not yet |
+| W3C WAI : ARIA Authoring Practices Guide | https://www.w3.org/WAI/ARIA/apg/ | Patterns | 2026-05-19 |
+| W3C WAI APG : Dialog Modal | https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/ | Pattern | 2026-05-19 |
+| W3C WAI APG : Combobox | https://www.w3.org/WAI/ARIA/apg/patterns/combobox/ | Pattern | 2026-05-19 |
+| W3C WAI APG : Tabs | https://www.w3.org/WAI/ARIA/apg/patterns/tabs/ | Pattern | 2026-05-19 |
+| W3C WAI WCAG22 Understanding : Target Size Minimum | https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html | Understanding doc | 2026-05-19 |
 | W3C Design Tokens Community Group | https://www.w3.org/community/design-tokens/ | Spec draft | Not yet |
-| W3C Design Tokens draft | https://www.designtokens.org/tr/drafts/format/ | Spec draft | Not yet |
+| W3C Design Tokens draft | https://www.designtokens.org/tr/drafts/format/ | Spec draft | 2026-05-19 |
 | web.dev : Patterns | https://web.dev/patterns/ | Tutorial | Not yet |
 | web.dev : Performance | https://web.dev/explore/performance | Tutorial | Not yet |
 | web.dev : Accessibility | https://web.dev/explore/accessibility | Tutorial | Not yet |
 | web.dev : CSS | https://web.dev/explore/css | Tutorial | Not yet |
+| web.dev : Vitals (Core Web Vitals) | https://web.dev/articles/vitals | Tutorial | 2026-05-19 |
+| web.dev : Optimize INP | https://web.dev/articles/optimize-inp | Tutorial | 2026-05-19 |
+| web.dev : Baseline | https://web.dev/baseline | Reference | 2026-05-19 |
 | Baseline : Web Platform Status | https://web-platform-dx.github.io/web-features/ | Compatibility | Not yet |
 | Can I Use | https://caniuse.com/ | Compatibility | Not yet |
 | developer.chrome.com | https://developer.chrome.com/docs/web-platform/ | Tutorial | Not yet |
