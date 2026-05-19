@@ -36,7 +36,16 @@ All skill content MUST be verified against these approved sources. No unverified
 | Baseline : Web Platform Status | https://web-platform-dx.github.io/web-features/ | Compatibility | Not yet |
 | Can I Use | https://caniuse.com/ | Compatibility | Not yet |
 | developer.chrome.com | https://developer.chrome.com/docs/web-platform/ | Tutorial | Not yet |
-| Open UI Community Group | https://open-ui.org/ | Spec drafts | Not yet |
+| Open UI Community Group | https://open-ui.org/ | Spec drafts | 2026-05-19 |
+| Open UI : Customizable Select | https://open-ui.org/components/customizableselect/ | Spec draft | 2026-05-19 |
+| MDN : appearance | https://developer.mozilla.org/en-US/docs/Web/CSS/appearance | Reference | 2026-05-19 |
+| MDN : ElementInternals | https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals | Reference | 2026-05-19 |
+| MDN : :user-invalid | https://developer.mozilla.org/en-US/docs/Web/CSS/:user-invalid | Reference | 2026-05-19 |
+| MDN : FormData | https://developer.mozilla.org/en-US/docs/Web/API/FormData | Reference | 2026-05-19 |
+| MDN : autocomplete attribute | https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/autocomplete | Reference | 2026-05-19 |
+| MDN : `<label>` | https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/label | Reference | 2026-05-19 |
+| MDN : `<fieldset>` | https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/fieldset | Reference | 2026-05-19 |
+| MDN : aria-errormessage | https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage | Reference | 2026-05-19 |
 
 ### Secondary Sources : Use Only When Primary Is Insufficient
 
