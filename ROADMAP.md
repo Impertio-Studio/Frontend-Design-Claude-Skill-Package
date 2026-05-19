@@ -7,41 +7,62 @@
 | Phase 1 | Raw Masterplan | DONE | 100% |
 | Phase 2 | Deep Research (Vooronderzoek) | DONE | 100% |
 | Phase 3 | Masterplan Refinement | DONE | 100% |
-| Phase 4 | Topic-Specific Research | NEXT (interleaved with Phase 5) | 0% |
-| Phase 5 | Skill Creation | PENDING | 0% |
+| Phase 4 | Topic-Specific Research | IN PROGRESS (interleaved) | 18% (2/11 drilled) |
+| Phase 5 | Skill Creation | IN PROGRESS | 8% (3/36 done) |
 | Phase 6 | Validation | PENDING | 0% |
 | Phase 7 | Publication | PENDING | 0% |
 
-**Overall Progress** : 42% (infrastructure + raw masterplan + vooronderzoek + Phase 3 refined masterplan complete; awaiting user-checkpoint before Phase 4+5)
+**Overall Progress** : 50% (batch 1 of 12 complete, batch 2 dispatched)
+
+## Active Batch
+
+| Worker | Task | Skill | Status |
+|--------|------|-------|--------|
+| fd-worker-1 | T-4 | frontend-syntax-html5-semantic | in_progress |
+| fd-worker-2 | T-6 | frontend-syntax-css-cascade-layers-scope | in_progress |
+| fd-worker-3 | T-5 | frontend-syntax-html5-form | awaiting Phase 4 topic-research |
 
 ## Next Steps
 
-1. User-checkpoint : present refined masterplan (19 decisions, 36 skills, 12 batches, full per-skill prompts) for approval
-2. Phase 4 + 5 : tmux-orchestration with 3 skill-builder workers
-   - Per batch : in-process opus agents for Phase 4 topic-research (11 skills require it, 25 skip per skip-criteria) -> tmux workers receive bundle-injected batch prompts
-   - Quality-gate every worker reply (validate-frontmatter + line-count + structure + language + emdash all exit 0)
-3. Phase 6 : full-pkg validation (frontend-agents-design-system-validator + frontend-agents-a11y-perf-consistency-auditor self-applied)
-4. Phase 7 : INDEX.md + README.md + social preview banner + GitHub release v1.0.0
+1. Phase 4 research for `frontend-syntax-html5-form` completes (Open UI gap drill, async) -> inject T-5 to fd-worker-3
+2. Batch-2 quality-gate loop : APPROVE / RE-INSTRUCT / REPLACE on each `done` event
+3. Batch-2 commit + close, dispatch batch-3 (skills batch syntax CSS : container-queries, has-selector, color-modern)
+4. Repeat batch loop through batch-12
+5. Phase 6 validation + INDEX/README + GitHub release v1.0.0
 
-## Skill Summary (Phase 3 refined, locked)
+## Skill Summary (Phase 3 refined, batch progress)
 
 | Category | Planned | Created | Validated |
 |----------|---------|---------|-----------|
-| core | 3 | 0 | 0 |
-| syntax | 9 | 0 | 0 |
-| impl | 6 | 0 | 0 |
-| errors | 4 | 0 | 0 |
-| theming | 2 | 0 | 0 |
-| visual-effects | 3 | 0 | 0 |
-| accessibility | 3 | 0 | 0 |
-| performance | 2 | 0 | 0 |
-| component-patterns | 2 | 0 | 0 |
-| agents | 2 | 0 | 0 |
-| **Total** | **36** | **0** | **0** |
-
-Final count locked at 36 after Phase 3 refinement (19 decisions applied : 8 MERGE + 4 ADD + 3 DROP + 1 SPLIT + 1 MOVE; net delta from raw 49 topics).
+| frontend-core | 3 | 3 | 3 |
+| frontend-syntax | 9 | 0 (2 in-flight) | 0 |
+| frontend-impl | 6 | 0 | 0 |
+| frontend-errors | 4 | 0 | 0 |
+| frontend-theming | 2 | 0 | 0 |
+| frontend-visual-effects | 3 | 0 | 0 |
+| frontend-accessibility | 3 | 0 | 0 |
+| frontend-performance | 2 | 0 | 0 |
+| frontend-component-patterns | 2 | 0 | 0 |
+| frontend-agents | 2 | 0 | 0 |
+| **Total** | **36** | **3** | **3** |
 
 ## Changelog
+
+### Phase 5 : Batch 1 complete (2026-05-19)
+
+- frontend-core-architecture (268 lines, ad341d4)
+- frontend-core-web-standards-baseline (254 lines, 8ff9043)
+- frontend-core-design-philosophy (266 lines, 94ee554)
+- All 5 validators green (frontmatter / line-count / structure / language / emdash)
+- Batch-1 quality-gate verdicts : T-1 + T-2 + T-3 all APPROVED
+- L-001 + L-002 lessons captured : validate-structure.js requires `{prefix}-{cat}` dir convention. Workflow Template + bootstrap script need update.
+- Fix commit a259f8c renamed all skill cat dirs and updated 55 masterplan path references in one pass.
+
+### Phase 5 : Batch 2 dispatched (2026-05-19)
+
+- T-4 fd-worker-1 frontend-syntax-html5-semantic (Phase 4 skip)
+- T-5 fd-worker-3 frontend-syntax-html5-form (Phase 4 research async)
+- T-6 fd-worker-2 frontend-syntax-css-cascade-layers-scope (Phase 4 skip)
 
 ### Phase 3 : Masterplan Refinement (2026-05-19)
 
@@ -53,7 +74,7 @@ Final count locked at 36 after Phase 3 refinement (19 decisions applied : 8 MERG
 - Phase 4 Topic-Research Strategy : 11 / 36 skills require Phase 4 research; 25 skip per skip-criteria
 - Quality Gates : 5 validators per skill (frontmatter, line-count, structure, language, emdash)
 - Risk Register : 13 risks tracked, top 3 (RISK-08 APG patterns, RISK-04 @starting-style, RISK-11 DTCG draft)
-- DECISIONS.md D-008 added documenting Phase-3 categorization decisions
+- DECISIONS.md D-008 added documenting Phase-3 categorization
 - HANDOFF.md updated to Phase 3 done, Phase 4+5 next
 
 ### Phase 2 : Deep Research / Vooronderzoek (2026-05-19)
