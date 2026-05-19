@@ -52,8 +52,14 @@ All skill content MUST be verified against these approved sources. No unverified
 | Source | URL | Type | Last Verified |
 |--------|-----|------|---------------|
 | TC39 Proposals | https://github.com/tc39/proposals | Spec drafts | Not yet |
+| TC39 Finished Proposals | https://github.com/tc39/proposals/blob/main/finished-proposals.md | Spec drafts | 2026-05-19 |
 | CSS Working Group GitHub | https://github.com/w3c/csswg-drafts | Spec drafts | Not yet |
 | WICG : Web Incubator Community Group | https://wicg.io/ | Proposals | Not yet |
+| MDN : Iterator | https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator | Reference | 2026-05-19 |
+| MDN : Scheduler.yield | https://developer.mozilla.org/en-US/docs/Web/API/Scheduler/yield | Reference | 2026-05-19 |
+| developer.chrome.com : scheduler.yield origin trial | https://developer.chrome.com/blog/introducing-scheduler-yield-origin-trial | Tutorial | 2026-05-19 |
+| TypeScript : Narrowing handbook | https://www.typescriptlang.org/docs/handbook/2/narrowing.html | Reference | 2026-05-19 |
+| TypeScript : tsconfig reference | https://www.typescriptlang.org/tsconfig/ | Reference | 2026-05-19 |
 
 ### Banned Sources
 

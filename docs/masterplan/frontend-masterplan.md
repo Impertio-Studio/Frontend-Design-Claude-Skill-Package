@@ -54,10 +54,10 @@ Summary : 19 refinement decisions producing 8 MERGE, 4 ADD (via combined skills)
 | impl | `skills/source/frontend-impl/` | 6 | `frontend-impl-{topic}` | core, syntax |
 | errors | `skills/source/frontend-errors/` | 4 | `frontend-errors-{topic}` | core, syntax, impl |
 | theming | `skills/source/frontend-theming/` | 2 | `frontend-theming-{topic}` | core, syntax (color-modern), impl (design-tokens) |
-| visual-effects | `skills/source/frontend-visual-effects/` | 3 | `frontend-visual-{topic}` | core, syntax (color-modern, has-selector), impl (view-transitions-scroll-animations) |
-| accessibility | `skills/source/frontend-accessibility/` | 3 | `frontend-a11y-{topic}` | core, syntax (html5-semantic, html5-form) |
-| performance | `skills/source/frontend-performance/` | 2 | `frontend-perf-{topic}` | core, impl (web-components, view-transitions-scroll-animations) |
-| component-patterns | `skills/source/frontend-component-patterns/` | 2 | `frontend-component-{topic}` | impl (popover-dialog-anchor), a11y (aria-patterns, focus-keyboard-inert) |
+| visual-effects | `skills/source/frontend-visual/` | 3 | `frontend-visual-{topic}` | core, syntax (color-modern, has-selector), impl (view-transitions-scroll-animations) |
+| accessibility | `skills/source/frontend-a11y/` | 3 | `frontend-a11y-{topic}` | core, syntax (html5-semantic, html5-form) |
+| performance | `skills/source/frontend-perf/` | 2 | `frontend-perf-{topic}` | core, impl (web-components, view-transitions-scroll-animations) |
+| component-patterns | `skills/source/frontend-component/` | 2 | `frontend-component-{topic}` | impl (popover-dialog-anchor), a11y (aria-patterns, focus-keyboard-inert) |
 | agents | `skills/source/frontend-agents/` | 2 | `frontend-agents-{topic}` | ALL prior |
 | **Total** | | **36** | | |
 
@@ -85,14 +85,14 @@ Batch 1 (core)
 | 2 | frontend-syntax-html5-semantic / frontend-syntax-html5-form / frontend-syntax-css-cascade-layers-scope | batch 1 | w1: `skills/source/frontend-syntax/frontend-syntax-html5-semantic/**` , w2: `skills/source/frontend-syntax/frontend-syntax-html5-form/**` , w3: `skills/source/frontend-syntax/frontend-syntax-css-cascade-layers-scope/**` | 25 min |
 | 3 | frontend-syntax-css-container-queries / frontend-syntax-css-has-selector / frontend-syntax-css-color-modern | batch 1, 2 | w1: `.../frontend-syntax-css-container-queries/**` , w2: `.../frontend-syntax-css-has-selector/**` , w3: `.../frontend-syntax-css-color-modern/**` | 25 min |
 | 4 | frontend-syntax-css-grid-subgrid / frontend-syntax-css-nesting-logical-properties / frontend-syntax-js-es2024-ts-dom | batch 1, 2 | w1: `.../frontend-syntax-css-grid-subgrid/**` , w2: `.../frontend-syntax-css-nesting-logical-properties/**` , w3: `.../frontend-syntax-js-es2024-ts-dom/**` | 25 min |
-| 5 | frontend-a11y-aria-patterns / frontend-a11y-focus-keyboard-inert / frontend-a11y-motion-contrast-wcag22 | batch 1, 2 | w1: `skills/source/frontend-accessibility/frontend-a11y-aria-patterns/**` , w2: `.../frontend-a11y-focus-keyboard-inert/**` , w3: `.../frontend-a11y-motion-contrast-wcag22/**` | 25 min |
-| 6 | frontend-perf-core-web-vitals-inp / frontend-perf-animation-gpu-containment / frontend-errors-animation-jank | batch 1, 2, 4 | w1: `skills/source/frontend-performance/frontend-perf-core-web-vitals-inp/**` , w2: `.../frontend-perf-animation-gpu-containment/**` , w3: `skills/source/frontend-errors/frontend-errors-animation-jank/**` | 25 min |
-| 7 | frontend-theming-color-palette-oklch / frontend-theming-dark-light-mode / frontend-visual-glassmorphism-backdrop | batch 1, 3 (color-modern) | w1: `skills/source/frontend-theming/frontend-theming-color-palette-oklch/**` , w2: `.../frontend-theming-dark-light-mode/**` , w3: `skills/source/frontend-visual-effects/frontend-visual-glassmorphism-backdrop/**` | 25 min |
+| 5 | frontend-a11y-aria-patterns / frontend-a11y-focus-keyboard-inert / frontend-a11y-motion-contrast-wcag22 | batch 1, 2 | w1: `skills/source/frontend-a11y/frontend-a11y-aria-patterns/**` , w2: `.../frontend-a11y-focus-keyboard-inert/**` , w3: `.../frontend-a11y-motion-contrast-wcag22/**` | 25 min |
+| 6 | frontend-perf-core-web-vitals-inp / frontend-perf-animation-gpu-containment / frontend-errors-animation-jank | batch 1, 2, 4 | w1: `skills/source/frontend-perf/frontend-perf-core-web-vitals-inp/**` , w2: `.../frontend-perf-animation-gpu-containment/**` , w3: `skills/source/frontend-errors/frontend-errors-animation-jank/**` | 25 min |
+| 7 | frontend-theming-color-palette-oklch / frontend-theming-dark-light-mode / frontend-visual-glassmorphism-backdrop | batch 1, 3 (color-modern) | w1: `skills/source/frontend-theming/frontend-theming-color-palette-oklch/**` , w2: `.../frontend-theming-dark-light-mode/**` , w3: `skills/source/frontend-visual/frontend-visual-glassmorphism-backdrop/**` | 25 min |
 | 8 | frontend-visual-gradients / frontend-visual-micro-interactions / frontend-impl-design-tokens | batch 1, 3, 7 | w1: `.../frontend-visual-gradients/**` , w2: `.../frontend-visual-micro-interactions/**` , w3: `skills/source/frontend-impl/frontend-impl-design-tokens/**` | 25 min |
 | 9 | frontend-impl-responsive-layout-fluid / frontend-impl-typography-system / frontend-impl-popover-dialog-anchor | batch 1-4 | w1: `.../frontend-impl-responsive-layout-fluid/**` , w2: `.../frontend-impl-typography-system/**` , w3: `.../frontend-impl-popover-dialog-anchor/**` | 30 min |
-| 10 | frontend-impl-view-transitions-scroll-animations / frontend-impl-web-components / frontend-component-modal-toast-system | batch 1-4, 5, 9 | w1: `.../frontend-impl-view-transitions-scroll-animations/**` , w2: `.../frontend-impl-web-components/**` , w3: `skills/source/frontend-component-patterns/frontend-component-modal-toast-system/**` | 30 min |
+| 10 | frontend-impl-view-transitions-scroll-animations / frontend-impl-web-components / frontend-component-modal-toast-system | batch 1-4, 5, 9 | w1: `.../frontend-impl-view-transitions-scroll-animations/**` , w2: `.../frontend-impl-web-components/**` , w3: `skills/source/frontend-component/frontend-component-modal-toast-system/**` | 30 min |
 | 11 | frontend-errors-cascade-conflicts / frontend-errors-layout-pitfalls / frontend-errors-units-rendering-viewport | batch 2-4 | w1: `skills/source/frontend-errors/frontend-errors-cascade-conflicts/**` , w2: `.../frontend-errors-layout-pitfalls/**` , w3: `.../frontend-errors-units-rendering-viewport/**` | 25 min |
-| 12 | frontend-component-data-tables-command-palette / frontend-agents-design-system-validator / frontend-agents-a11y-perf-consistency-auditor | all prior | w1: `skills/source/frontend-component-patterns/frontend-component-data-tables-command-palette/**` , w2: `skills/source/frontend-agents/frontend-agents-design-system-validator/**` , w3: `.../frontend-agents-a11y-perf-consistency-auditor/**` | 30 min |
+| 12 | frontend-component-data-tables-command-palette / frontend-agents-design-system-validator / frontend-agents-a11y-perf-consistency-auditor | all prior | w1: `skills/source/frontend-component/frontend-component-data-tables-command-palette/**` , w2: `skills/source/frontend-agents/frontend-agents-design-system-validator/**` , w3: `.../frontend-agents-a11y-perf-consistency-auditor/**` | 30 min |
 
 Total : 12 batches, 36 skills, estimated 5.5 hours of worker-time at 3-worker parallelism.
 
@@ -1079,7 +1079,7 @@ Report : `tmo task done T-<id> --output "<commit-sha>"`.
 
 ```
 Workspace : /home/freek/GitHub/Frontend-Design-Claude-Skill-Package/
-Output dir : skills/source/frontend-accessibility/frontend-a11y-aria-patterns/
+Output dir : skills/source/frontend-a11y/frontend-a11y-aria-patterns/
 
 Files to create :
   - SKILL.md (max 500 lines, YAML folded scalar `>`, "Use when..." opener, Keywords line, license:MIT, compatibility, metadata)
@@ -1159,7 +1159,7 @@ Report : `tmo task done T-<id> --output "<commit-sha>"`.
 
 ```
 Workspace : /home/freek/GitHub/Frontend-Design-Claude-Skill-Package/
-Output dir : skills/source/frontend-accessibility/frontend-a11y-focus-keyboard-inert/
+Output dir : skills/source/frontend-a11y/frontend-a11y-focus-keyboard-inert/
 
 Files to create :
   - SKILL.md (max 500 lines, YAML folded scalar `>`, "Use when..." opener, Keywords line, license:MIT, compatibility, metadata)
@@ -1239,7 +1239,7 @@ Report : `tmo task done T-<id> --output "<commit-sha>"`.
 
 ```
 Workspace : /home/freek/GitHub/Frontend-Design-Claude-Skill-Package/
-Output dir : skills/source/frontend-accessibility/frontend-a11y-motion-contrast-wcag22/
+Output dir : skills/source/frontend-a11y/frontend-a11y-motion-contrast-wcag22/
 
 Files to create :
   - SKILL.md (max 500 lines, YAML folded scalar `>`, "Use when..." opener, Keywords line, license:MIT, compatibility, metadata)
@@ -1322,7 +1322,7 @@ Report : `tmo task done T-<id> --output "<commit-sha>"`.
 
 ```
 Workspace : /home/freek/GitHub/Frontend-Design-Claude-Skill-Package/
-Output dir : skills/source/frontend-performance/frontend-perf-core-web-vitals-inp/
+Output dir : skills/source/frontend-perf/frontend-perf-core-web-vitals-inp/
 
 Files to create :
   - SKILL.md (max 500 lines, YAML folded scalar `>`, "Use when..." opener, Keywords line, license:MIT, compatibility, metadata)
@@ -1403,7 +1403,7 @@ Report : `tmo task done T-<id> --output "<commit-sha>"`.
 
 ```
 Workspace : /home/freek/GitHub/Frontend-Design-Claude-Skill-Package/
-Output dir : skills/source/frontend-performance/frontend-perf-animation-gpu-containment/
+Output dir : skills/source/frontend-perf/frontend-perf-animation-gpu-containment/
 
 Files to create :
   - SKILL.md (max 500 lines, YAML folded scalar `>`, "Use when..." opener, Keywords line, license:MIT, compatibility, metadata)
@@ -1711,7 +1711,7 @@ Report : `tmo task done T-<id> --output "<commit-sha>"`.
 
 ```
 Workspace : /home/freek/GitHub/Frontend-Design-Claude-Skill-Package/
-Output dir : skills/source/frontend-visual-effects/frontend-visual-glassmorphism-backdrop/
+Output dir : skills/source/frontend-visual/frontend-visual-glassmorphism-backdrop/
 
 Files to create :
   - SKILL.md (max 500 lines, YAML folded scalar `>`, "Use when..." opener, Keywords line, license:MIT, compatibility, metadata)
@@ -1782,7 +1782,7 @@ Report : `tmo task done T-<id> --output "<commit-sha>"`.
 
 ```
 Workspace : /home/freek/GitHub/Frontend-Design-Claude-Skill-Package/
-Output dir : skills/source/frontend-visual-effects/frontend-visual-gradients/
+Output dir : skills/source/frontend-visual/frontend-visual-gradients/
 
 Files to create :
   - SKILL.md (max 500 lines, YAML folded scalar `>`, "Use when..." opener, Keywords line, license:MIT, compatibility, metadata)
@@ -1858,7 +1858,7 @@ Report : `tmo task done T-<id> --output "<commit-sha>"`.
 
 ```
 Workspace : /home/freek/GitHub/Frontend-Design-Claude-Skill-Package/
-Output dir : skills/source/frontend-visual-effects/frontend-visual-micro-interactions/
+Output dir : skills/source/frontend-visual/frontend-visual-micro-interactions/
 
 Files to create :
   - SKILL.md (max 500 lines, YAML folded scalar `>`, "Use when..." opener, Keywords line, license:MIT, compatibility, metadata)
@@ -2403,7 +2403,7 @@ Report : `tmo task done T-<id> --output "<commit-sha>"`.
 
 ```
 Workspace : /home/freek/GitHub/Frontend-Design-Claude-Skill-Package/
-Output dir : skills/source/frontend-component-patterns/frontend-component-modal-toast-system/
+Output dir : skills/source/frontend-component/frontend-component-modal-toast-system/
 
 Files to create :
   - SKILL.md (max 500 lines, YAML folded scalar `>`, "Use when..." opener, Keywords line, license:MIT, compatibility, metadata)
@@ -2720,7 +2720,7 @@ Report : `tmo task done T-<id> --output "<commit-sha>"`.
 
 ```
 Workspace : /home/freek/GitHub/Frontend-Design-Claude-Skill-Package/
-Output dir : skills/source/frontend-component-patterns/frontend-component-data-tables-command-palette/
+Output dir : skills/source/frontend-component/frontend-component-data-tables-command-palette/
 
 Files to create :
   - SKILL.md (max 500 lines, YAML folded scalar `>`, "Use when..." opener, Keywords line, license:MIT, compatibility, metadata)
