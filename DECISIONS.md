@@ -64,3 +64,19 @@ Numbered decisions (D-XXX) with rationale. Immutable once recorded — new decis
 - **Decision**: Publish all skill packages under the OpenAEC Foundation GitHub organization.
 - **Rationale**: Centralized, consistent branding. Community ownership. Discoverability.
 - **Consequence**: All repos follow OpenAEC naming conventions and include social preview banners with OpenAEC branding.
+
+---
+
+## D-008: Phase 3 Categorization (36 skills locked across 10 categories)
+
+- **Date**: 2026-05-19
+- **Decision**: Final skill inventory locked at 36 skills across 10 categories, applying 19 refinement decisions D-R01..D-R19 documented in `docs/masterplan/frontend-masterplan.md`.
+- **Categories kept (10)**: core (3), syntax (9), impl (6), errors (4), theming (2), visual-effects (3), accessibility (3), performance (2), component-patterns (2), agents (2).
+- **Decisions summary**:
+  - **8 MERGE** : core-rendering-model into core-architecture (D-R02), core-browser-baseline into core-web-standards (D-R01), impl-form-design into syntax-html5-form (D-R12), impl-scroll-driven-animations into impl-view-transitions-scroll-animations (D-R11), visual-scroll-effects into impl-view-transitions-scroll-animations (D-R13), errors-a11y-violations into a11y-aria-patterns (D-R15), a11y-focus-management + a11y-keyboard-nav + inert into a11y-focus-keyboard-inert (D-R16), perf-css-optimization + perf-animation-gpu into perf-animation-gpu-containment (D-R18), agents-a11y-auditor + agents-cross-skill-consistency into agents-a11y-perf-consistency-auditor (D-R19), impl-speculation-rules into perf-core-web-vitals-inp (D-R10), component-toast-notifications into component-modal-toast-system (D-R05).
+  - **4 ADD (via combined skills)** : syntax-css-cascade-layers-scope adds @scope (D-R06), syntax-css-nesting-logical-properties adds Logical Properties (D-R07), syntax-js-es2024-ts-dom adds TS DOM patterns (D-R08), a11y-motion-contrast-wcag22 adds WCAG 2.2 compliance content (D-R17).
+  - **3 DROP** : visual-particle-canvas (D-R03 niche), component-card-layouts (D-R04 folded into impl-responsive-layout-fluid), separate component-toast-notifications (D-R05 merged).
+  - **1 SPLIT (combined-split)** : impl-popover-api expanded into impl-popover-dialog-anchor covering popover + dialog + anchor + discrete-transitions + closedby + position-try-fallbacks (D-R09).
+  - **1 MOVE** : theming-distinctive-aesthetic relocated to core-design-philosophy (D-R14).
+- **Rationale**: Pre-research estimate was ~49 topics; vooronderzoek §13 recommended ~52 with mandatory adds. Phase 3 prioritizes deterministic, maintainable skills over inventory inflation. 36 is at the upper bound of the 30-36 user-target range, preserving topical depth while consolidating overlapping mechanics (popover + dialog + anchor; focus + keyboard + inert; perf-containment + animation-gpu).
+- **Consequence**: 12 batches of 3 workers each in tmux-orchestration; 11 / 36 skills require Phase 4 topic-research; remaining 25 skip per skip-criteria (vooronderzoek coverage sufficient). Full execution plan with file-scope-disjoint worker assignments and ready-to-paste worker prompts in `docs/masterplan/frontend-masterplan.md`.
