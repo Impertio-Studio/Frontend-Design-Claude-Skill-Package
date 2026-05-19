@@ -2,6 +2,45 @@
   "version": "2.0.0",
   "tasks": [
     {
+      "label": "tmo:fd-worker-1",
+      "type": "shell",
+      "command": "tmux new-session -A -s fd-worker-1 -c ${workspaceFolder} 'TMO_SESSION=fd-worker-1 TMO_STATE_DIR=${workspaceFolder}/state claude'",
+      "presentation": {
+        "panel": "dedicated",
+        "group": "fd-tmo-workers"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "tmo:fd-worker-2",
+      "type": "shell",
+      "command": "tmux new-session -A -s fd-worker-2 -c ${workspaceFolder} 'TMO_SESSION=fd-worker-2 TMO_STATE_DIR=${workspaceFolder}/state claude'",
+      "presentation": {
+        "panel": "dedicated",
+        "group": "fd-tmo-workers"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "tmo:fd-worker-3",
+      "type": "shell",
+      "command": "tmux new-session -A -s fd-worker-3 -c ${workspaceFolder} 'TMO_SESSION=fd-worker-3 TMO_STATE_DIR=${workspaceFolder}/state claude'",
+      "presentation": {
+        "panel": "dedicated",
+        "group": "fd-tmo-workers"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "tmo:fd-start-all",
+      "dependsOn": ["tmo:fd-worker-1", "tmo:fd-worker-2", "tmo:fd-worker-3"],
+      "dependsOrder": "parallel",
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "problemMatcher": []
+    },
+    {
       "label": "tmo:worker-1",
       "type": "shell",
       "command": "tmux new-session -A -s worker-1 -c ${workspaceFolder} 'TMO_SESSION=worker-1 TMO_STATE_DIR=${workspaceFolder}/state claude'",
@@ -28,15 +67,6 @@
       "presentation": {
         "panel": "dedicated",
         "group": "tmo-workers"
-      },
-      "problemMatcher": []
-    },
-    {
-      "label": "tmo:start-all",
-      "dependsOn": ["tmo:worker-1", "tmo:worker-2", "tmo:worker-3"],
-      "dependsOrder": "parallel",
-      "runOptions": {
-        "runOn": "folderOpen"
       },
       "problemMatcher": []
     }
