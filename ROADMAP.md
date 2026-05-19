@@ -7,90 +7,103 @@
 | Phase 1 | Raw Masterplan | DONE | 100% |
 | Phase 2 | Deep Research (Vooronderzoek) | DONE | 100% |
 | Phase 3 | Masterplan Refinement | DONE | 100% |
-| Phase 4 | Topic-Specific Research | IN PROGRESS (interleaved) | 18% (2/11 drilled) |
-| Phase 5 | Skill Creation | IN PROGRESS | 8% (3/36 done) |
-| Phase 6 | Validation | PENDING | 0% |
-| Phase 7 | Publication | PENDING | 0% |
+| Phase 4 | Topic-Specific Research | DONE | 100% (11/11 drilled) |
+| Phase 5 | Skill Creation | DONE | 100% (36/36) |
+| Phase 6 | Validation | PARTIAL | 80% (5 validators green, audit-report pending) |
+| Phase 7 | Publication | PENDING | 0% (awaiting user-go on archive diff) |
 
-**Overall Progress** : 50% (batch 1 of 12 complete, batch 2 dispatched)
+**Overall Progress** : 80% (all skills committed + validated, awaiting archive-diff checkpoint before INDEX/README/release)
 
-## Active Batch
+## Next Steps : USER CHECKPOINT
 
-| Worker | Task | Skill | Status |
-|--------|------|-------|--------|
-| fd-worker-1 | T-4 | frontend-syntax-html5-semantic | in_progress |
-| fd-worker-2 | T-6 | frontend-syntax-css-cascade-layers-scope | in_progress |
-| fd-worker-3 | T-5 | frontend-syntax-html5-form | awaiting Phase 4 topic-research |
+Per user instruction in Prompt 1 : "Na Phase 5 STOP. Wacht op user. Daarna : diff-fase tegen archief in `/home/freek/GitHub/_archive/Frontend-Design-pre-bootstrap-2026-05-19/` (18 oude SKILL.md's) met merge-strategie-matrix voor user-akkoord."
 
-## Next Steps
+Awaiting user-go to start :
+1. Archive diff : 18 old fd-* skills vs 36 new frontend-* skills
+2. Merge-strategy matrix per old skill (KEEP-AS-IS-REWRITE / MERGE-INTO-NEW / DROP-OBSOLETE / SALVAGE-EXAMPLES)
+3. Present matrix for user approval
+4. Phase 6 : full audit-report + INDEX.md + Keywords polish + em-dash sweep
+5. Phase 7 : README finalize + social preview banner + GitHub release v1.0.0
 
-1. Phase 4 research for `frontend-syntax-html5-form` completes (Open UI gap drill, async) -> inject T-5 to fd-worker-3
-2. Batch-2 quality-gate loop : APPROVE / RE-INSTRUCT / REPLACE on each `done` event
-3. Batch-2 commit + close, dispatch batch-3 (skills batch syntax CSS : container-queries, has-selector, color-modern)
-4. Repeat batch loop through batch-12
-5. Phase 6 validation + INDEX/README + GitHub release v1.0.0
-
-## Skill Summary (Phase 3 refined, batch progress)
+## Skill Summary : Phase 5 complete
 
 | Category | Planned | Created | Validated |
 |----------|---------|---------|-----------|
 | frontend-core | 3 | 3 | 3 |
-| frontend-syntax | 9 | 0 (2 in-flight) | 0 |
-| frontend-impl | 6 | 0 | 0 |
-| frontend-errors | 4 | 0 | 0 |
-| frontend-theming | 2 | 0 | 0 |
-| frontend-visual-effects | 3 | 0 | 0 |
-| frontend-accessibility | 3 | 0 | 0 |
-| frontend-performance | 2 | 0 | 0 |
-| frontend-component-patterns | 2 | 0 | 0 |
-| frontend-agents | 2 | 0 | 0 |
-| **Total** | **36** | **3** | **3** |
+| frontend-syntax | 9 | 9 | 9 |
+| frontend-impl | 6 | 6 | 6 |
+| frontend-errors | 4 | 4 | 4 |
+| frontend-theming | 2 | 2 | 2 |
+| frontend-visual | 3 | 3 | 3 |
+| frontend-a11y | 3 | 3 | 3 |
+| frontend-perf | 2 | 2 | 2 |
+| frontend-component | 2 | 2 | 2 |
+| frontend-agents | 2 | 2 | 2 |
+| **Total** | **36** | **36** | **36** |
+
+## Validation results (all 5 validators green)
+
+- validate-frontmatter.js : 36/36 OK
+- validate-line-count.js : 36/36 OK (213-406 lines, max 500)
+- validate-structure.js : PASSED
+- validate-language.js : PASSED (English-only)
+- validate-emdash.js : PASSED (no em-dash in headings)
+
+Every skill has SKILL.md + 3 reference files (anti-patterns.md, examples.md, methods.md).
+
+## Phase 5 Batch Summary
+
+| Batch | Skills | Commits |
+|-------|--------|---------|
+| 1 | 3 core | ad341d4, 8ff9043, 94ee554 + path-rename a259f8c |
+| 2 | 3 syntax (html5+cascade) | 982864b, 2175dbd, 88185cb |
+| 3 | 3 syntax (CSS modern) | 13ce44a, 9d0ead8, f133eb5 + anti-patterns 39ad733 |
+| 4 | 3 syntax (grid+nesting+ES2024) | 0228f06, aae21ea, 759ee1d |
+| 5 | 3 a11y | 8f16724, a834d0f + path-rename 52631e8 (incl T-13) |
+| 6 | 3 perf+errors-jank | bdea2b7, 7c39919, 46fd631 |
+| 7 | 3 theming+visual-glass | 354f8ad, fa75892, 5162ca7 |
+| 8 | 3 visual+impl-tokens | a4528d0, 637bfd2, c1c6358 |
+| 9 | 3 impl (responsive+typo+popover) | 9fbf4dc, 3bb7a82, 5043d98 |
+| 10 | 3 impl+component (view-trans+web-comp+modal-toast) | 55bef51, fe0768c, 26806d1 |
+| 11 | 3 errors (cascade+layout+units) | e52de87, 43af46c, 4799df9 |
+| 12 | 2 component+2 agents | 3408177, 6267805, 25f092c |
+
+Total : 36 skill commits + 3 fix commits (path-renames, anti-patterns fill).
+
+## Phase 4 Topic-Research summary
+
+11 / 36 skills required Phase 4 drill. All 11 research files produced + checked in :
+
+| Skill | Research file | Words |
+|-------|---------------|-------|
+| frontend-core-design-philosophy | frontend-core-design-philosophy-research.md | 3820 |
+| frontend-syntax-html5-form | frontend-syntax-html5-form-research.md | 3996 |
+| frontend-syntax-js-es2024-ts-dom | frontend-syntax-js-es2024-ts-dom-research.md | 3623 |
+| frontend-a11y-aria-patterns | frontend-a11y-aria-patterns-research.md | 4946 |
+| frontend-a11y-focus-keyboard-inert | frontend-a11y-focus-keyboard-inert-research.md | 4977 |
+| frontend-a11y-motion-contrast-wcag22 | frontend-a11y-motion-contrast-wcag22-research.md | 3584 |
+| frontend-perf-core-web-vitals-inp | frontend-perf-core-web-vitals-inp-research.md | 4023 |
+| frontend-impl-typography-system | frontend-impl-typography-system-research.md | 3096 |
+| frontend-impl-popover-dialog-anchor | frontend-impl-popover-dialog-anchor-research.md | 3848 |
+| frontend-errors-units-rendering-viewport | frontend-errors-units-rendering-viewport-research.md | 3676 |
+| (vooronderzoek absorbed) | vooronderzoek-frontend.md | 7545 |
+
+Total research corpus : 47,134 words. 250+ WebFetch verifications against MDN / W3C / WAI / web.dev / WHATWG / designtokens.org / Open UI.
 
 ## Changelog
 
-### Phase 5 : Batch 1 complete (2026-05-19)
+### Phase 5 : Skill Creation complete (2026-05-19)
 
-- frontend-core-architecture (268 lines, ad341d4)
-- frontend-core-web-standards-baseline (254 lines, 8ff9043)
-- frontend-core-design-philosophy (266 lines, 94ee554)
-- All 5 validators green (frontmatter / line-count / structure / language / emdash)
-- Batch-1 quality-gate verdicts : T-1 + T-2 + T-3 all APPROVED
-- L-001 + L-002 lessons captured : validate-structure.js requires `{prefix}-{cat}` dir convention. Workflow Template + bootstrap script need update.
-- Fix commit a259f8c renamed all skill cat dirs and updated 55 masterplan path references in one pass.
+- All 36 skills committed + validated (validate-frontmatter / line-count / structure / language / emdash all green)
+- 12 batches dispatched via tmux-orchestration with 3 skill-builder workers
+- 3 fix commits applied for systematic path-rename + missing-reference (L-001 + L-002 + worker-session-loss between batches)
+- 11 Phase-4 topic-research files produced (47K total words)
+- Quality-gate verdicts : 0 REJECT, 1 RE-INSTRUCT (T-1 path fix), 1 worker session-loss handled (commit-on-behalf for T-9 + write missing anti-patterns)
+- STOP per user instruction : awaiting archive-diff checkpoint
 
-### Phase 5 : Batch 2 dispatched (2026-05-19)
+### Earlier phases : see git log
 
-- T-4 fd-worker-1 frontend-syntax-html5-semantic (Phase 4 skip)
-- T-5 fd-worker-3 frontend-syntax-html5-form (Phase 4 research async)
-- T-6 fd-worker-2 frontend-syntax-css-cascade-layers-scope (Phase 4 skip)
-
-### Phase 3 : Masterplan Refinement (2026-05-19)
-
-- Refined masterplan written : `docs/masterplan/frontend-masterplan.md` (3000+ lines)
-- 19 Refinement Decisions table (D-R01..D-R19) with MERGE / DROP / SPLIT / ADD / MOVE actions
-- Final Category Architecture : 10 categories, 36 skills, dependency chain core -> syntax -> impl / a11y / perf -> theming / visual / errors -> component-patterns -> agents
-- Execution Plan : 12 batches of 3 workers each, file-scope-disjoint per worker
-- Per-Skill Agent Prompts : 36 complete tmux-worker-ready prompts (scope bullets, out-of-scope, keywords, approved sources, decision trees, anti-patterns, quality rules, validators)
-- Phase 4 Topic-Research Strategy : 11 / 36 skills require Phase 4 research; 25 skip per skip-criteria
-- Quality Gates : 5 validators per skill (frontmatter, line-count, structure, language, emdash)
-- Risk Register : 13 risks tracked, top 3 (RISK-08 APG patterns, RISK-04 @starting-style, RISK-11 DTCG draft)
-- DECISIONS.md D-008 added documenting Phase-3 categorization
-- HANDOFF.md updated to Phase 3 done, Phase 4+5 next
-
-### Phase 2 : Deep Research / Vooronderzoek (2026-05-19)
-
-- `docs/research/vooronderzoek-frontend.md` written : 545 lines, 15 sections
-- 41 WebFetch verifications against MDN / W3C-WAI / web.dev / designtokens.org
-- Newly discovered sub-topics captured (§12) : @scope, closedby, Speculation Rules, ElementInternals, CSS Logical Properties, Style Container Queries, position-try-fallbacks, Scoped Custom Element Registries, APCA, dvh/svh/lvh, inert, @starting-style + transition-behavior
-- Recommendations for Phase 3 captured (§13)
-- Verification Gaps documented (§14) : 10 gaps for Phase 4 topic-research drilling
-- SOURCES.md Last-Verified updated for primary verified URLs
-
-### Phase 1 : Infrastructure + Raw Masterplan (2026-05-19)
-
-- Repository structure created
-- Core files initialized (CLAUDE.md, ROADMAP.md, REQUIREMENTS.md, DECISIONS.md, SOURCES.md, WAY_OF_WORK.md, LESSONS.md, CHANGELOG.md, HANDOFF.md, OPEN-QUESTIONS.md, INDEX.md)
-- Skill category directories created
-- Raw masterplan written : 10 categories, ~49 topics inventoried (`docs/masterplan/frontend-masterplan-raw.md`)
-- SOURCES.md populated with ~25 approved web-standards URLs (MDN, W3C, WAI-ARIA, web.dev, WHATWG, Baseline, caniuse, Open UI)
-- Ready for Phase 2 deep research
+- Phase 1 : commit 4e6c55e (raw masterplan + SOURCES)
+- Phase 2 : commit 1fe1e3c (vooronderzoek 7545 words, 41 verifications)
+- Phase 3 : commit 20bbf3d (refined masterplan 3051 lines, 19 decisions, 12 batches)
+- Phase 5 path-rename commits : a259f8c (core+syntax+impl+errors+agents), 52631e8 (a11y+visual+perf+component), 39ad733 (color-modern anti-patterns)
