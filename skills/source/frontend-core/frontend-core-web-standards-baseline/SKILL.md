@@ -221,7 +221,7 @@ A `@supports` wrapper or polyfill is removable when the feature reached Widely A
 1. Query the project for `@supports` blocks.
 2. For each block, look up the feature on web-features.
 3. If `baseline === 'high'` and `baseline_high_date` is older than 6 months : remove the wrapper, keep only the modern rule.
-4. Commit with `chore: remove fallback for X (Widely Available since YYYY-MM)`.
+4. Commit with a message such as `remove fallback for X (Widely Available since YYYY-MM)`, in your repository's commit format.
 
 ## Anti-patterns (summary)
 
