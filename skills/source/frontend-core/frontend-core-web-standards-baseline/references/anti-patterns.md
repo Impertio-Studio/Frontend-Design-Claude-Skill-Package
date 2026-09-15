@@ -24,7 +24,7 @@ Symptom : Bundle ships 30 KB of JavaScript to emulate a CSS or DOM feature that 
 
 Root cause : Stale polyfill registered when the feature was Limited; never removed after the feature reached Widely Available. Examples : `:has()` polyfills, `IntersectionObserver` polyfills, `Object.fromEntries` polyfills.
 
-Fix : Per release, query the project for polyfill registrations. For each, look up the feature on `web-features`. If `status.baseline === 'high'` and `baseline_high_date` is older than 6 months : delete the polyfill. Commit message : `chore: remove polyfill for X (Widely Available since YYYY-MM)`.
+Fix : Per release, query the project for polyfill registrations. For each, look up the feature on `web-features`. If `status.baseline === 'high'` and `baseline_high_date` is older than 6 months : delete the polyfill. Commit message : `remove polyfill for X (Widely Available since YYYY-MM)`, in your repository's commit format.
 
 ## 4. Using `try/catch` as feature detection
 
